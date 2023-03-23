@@ -3,10 +3,11 @@
     position: sticky;
     bottom: 0;
     left: 0;
-    height: calc(100vh - 253px);
+    height: calc(100vh - 34vh);
     background-color: #fff;
     text-align: right; 
-    overflow-y: auto;   
+    overflow-y: auto;
+    padding-bottom: 70px;
 
     .preview__close {
         margin-right: 0;
@@ -91,5 +92,12 @@
 @media (max-width: 415px) {
     .book-preview > .preview > .preview__thumbnail > img {
         height: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .book-preview {
+        height: calc(100vh - 30vh);
+
     }
 }

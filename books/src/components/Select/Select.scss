@@ -21,3 +21,8 @@ label {
         display: none;
     }
 }
+@media (max-width: 306px) {
+    label > select {
+        width: 90px;
+    }
+}
