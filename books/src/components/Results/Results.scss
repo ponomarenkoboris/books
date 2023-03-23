@@ -1,0 +1,114 @@
+.results {
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+
+    &__search-status {
+        box-sizing: content-box;
+        height: 50px;
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .error-message {
+            font-size: 1.5rem;
+        }
+
+        .results__count {
+            margin: 0;
+            width: fit-content;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .spinner {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            background-color: inherit;
+            border-radius: 50%;
+            border-left: 3px solid lightgrey;
+            border-top: 3px solid lightgrey;
+            border-right: 3px solid lightgrey;
+            border-bottom: 3px solid transparent;
+            animation: spin 1s linear infinite
+        
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .books-list {
+        display: grid;
+        grid-template-columns: repeat(6, 200px);
+        align-items: end;
+        gap: 40px;
+
+        @media (max-width: 1428px) {
+            & {
+                grid-template-columns: repeat(5, 200px);
+            }
+        }
+
+        @media (max-width: 1184px) {
+            & {
+                grid-template-columns: repeat(4, 200px);
+            }
+        }
+
+        @media (max-width: 940px) {
+            & {
+                grid-template-columns: repeat(3, 200px);
+            }
+        }
+
+        @media (max-width: 707px) {
+            & {
+                grid-template-columns: repeat(2, 200px);
+            }
+        }
+
+        @media (max-width: 459px) {
+            & {
+                grid-template-columns: repeat(1, 200px);
+            }
+        }
+        
+    }
+    
+    .load-more {
+        padding: 40px;
+    
+    
+        &__btn {
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            padding: 10px 15px;
+            background-color: inherit;
+            transition: background-color 50ms linear;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            color: #fff;
+            background-color: rgba($color: #0044ff, $alpha: .6);
+    
+            &:hover {
+                text-decoration: underline;
+            }
+    
+            &:active {
+                background-color: rgba($color: #0044ff, $alpha: .9);
+            }
+        }
+    }
+}
+

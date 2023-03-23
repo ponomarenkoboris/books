@@ -1,0 +1,23 @@
+label {
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        width: 140px;
+        color: black;
+        font-size: inherit;
+        margin-left: 10px;
+        height: 100%;
+        outline: none;
+        padding: 4px;
+        position: relative;
+        background-image: url('../../assets/drop.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+}
